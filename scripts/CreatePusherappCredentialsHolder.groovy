@@ -12,7 +12,7 @@ target(createPusherappCredentialsHolder: "Updates Config.groovy with default hol
 			configFile.withWriterAppend {
 				it.write """
 
-// Added by the Pusherapp plugin:
+// Added by the Pusher plugin:
 pusherapp.host = "api.pusherapp.com"
 pusherapp.applicationId = ""
 pusherapp.applicationKey = ""
