@@ -17,13 +17,13 @@ import org.codehaus.groovy.grails.commons.ConfigurationHolder
  * Copyright 2010. Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
  */
 class PusherService {
-       
-  def grailsApplication
 
-  def pusherHost
-  def pusherApplicationId 
-  def pusherApplicationKey
-  def pusherApplicationSecret
+  def config = ConfigurationHolder.config
+
+  def pusherHost = config.pusherapp.host
+  def pusherApplicationId = config.pusherapp.applicationId
+  def pusherApplicationKey = config.pusherapp.applicationKey
+  def pusherApplicationSecret = config.pusherapp.applicationSecret
 
   private def byteArrayToString(byte[] data) {
     BigInteger bigInteger = new BigInteger(1, data)
@@ -171,14 +171,6 @@ class PusherService {
       null
     }
   }   
-  
-  private def isPusherCredentialsAvailableInConfig() {
-    if (!grailsApplication.config.pusherapp.pusherHost) {
-    } else if (!grailsApplication.config.pusherapp.pusherApplicationId) {
-    } else if (!grailsApplication.config.pusherapp.pusherApplicationKey) {
-    } else if (!grailsApplication.config.pusherapp.pusherApplicationSecret) {
-    }
-  }
 
   /**
    * Generate the authorization string required for private channels

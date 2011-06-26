@@ -8,3 +8,7 @@
 //
 //    ant.mkdir(dir:"${basedir}/grails-app/jobs")
 //
+
+includeTargets << new File("${pluginBasedir}/scripts/CreatePusherappCredentialsHolder.groovy")
+
+createPusherappCredentialsHolder()
