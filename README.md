@@ -23,8 +23,8 @@ Inject it in your artifacts declaring this attribute:
 
 Call one of the two methods called "triggerPush" and pass channel name, event name and the message body (JSON as String) as parameters:
 
-    pusherService.triggerPush('test_channel', 'test_event', jsonData)
+    pusherService.triggerPush(channel, event, jsonData)
 
 The second "triggerPush" method provides an additional parameter for the socket_id:
 
-    pusherService.triggerPush("test_channel", "test_event", jsonData, socketId);
+    pusherService.triggerPush(channel, event, jsonData, socketId);
