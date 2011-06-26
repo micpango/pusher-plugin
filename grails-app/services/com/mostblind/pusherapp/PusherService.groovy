@@ -7,15 +7,6 @@ import javax.crypto.spec.SecretKeySpec
 import static groovyx.net.http.ContentType.URLENC
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
-/**
- * Class to send messages to Pusher's REST API.
- *
- * Please set pusherApplicationId, pusherApplicationKey, pusherApplicationSecret accordingly
- * before sending any request.
- *
- * @author Michael Pangopoulos (based on http://tinyurl.com/2urje4s)
- * Copyright 2010. Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
- */
 class PusherService {
 
   def config = ConfigurationHolder.config
