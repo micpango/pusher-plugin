@@ -20,4 +20,5 @@ prodDb*
 stacktrace.log
 c.tld
 fmt.tld
-
+*.zip
+plugin.xml
