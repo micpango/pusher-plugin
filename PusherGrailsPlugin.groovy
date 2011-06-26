@@ -13,9 +13,9 @@ class PusherGrailsPlugin {
     // TODO Fill in these fields
     def author = "Michael Pangopoulos"
     def authorEmail = "michael@mostblind.com"
-    def title = "Pusher plugin for Grails"
+    def title = "Pusher plugin"
     def description = '''\\
-                        Brief description of the plugin.
+                        Plugin for adding Pusher support into your application.
                       '''
 
     // URL to the plugin's documentation
