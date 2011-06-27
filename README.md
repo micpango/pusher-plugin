@@ -2,6 +2,10 @@
 
 This plugin is a wrapper for the [Pusher](http://pusher.com/) REST API.
 
+
+### Installation
+    grails install-plugin pusher
+
 ### Configuration
 
 When installing the plugin, placeholders for your Pusher credentials are added to your Config.groovy file. 
