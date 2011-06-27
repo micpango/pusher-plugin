@@ -31,4 +31,8 @@ Call one of the two methods called "triggerPush" and pass channel name, event na
 
 The second "triggerPush" method provides an additional parameter for the socket_id:
 
-    pusherService.triggerPush(channel, event, jsonData, socketId);
+    pusherService.triggerPush(channel, event, jsonData, socketId)
+
+Helper method for generating authorization string required for private channels:
+
+    pusherService.genAuthString(socketId, channel)
