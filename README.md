@@ -2,6 +2,10 @@
 
 This plugin is a wrapper for the [Pusher](http://pusher.com/) REST API.
 
+
+### Installation
+    grails install-plugin pusher
+
 ### Configuration
 
 When installing the plugin, placeholders for your Pusher credentials are added to your Config.groovy file. 
@@ -27,4 +31,8 @@ Call one of the two methods called "triggerPush" and pass channel name, event na
 
 The second "triggerPush" method provides an additional parameter for the socket_id:
 
-    pusherService.triggerPush(channel, event, jsonData, socketId);
+    pusherService.triggerPush(channel, event, jsonData, socketId)
+
+Helper method for generating authorization string required for private channels:
+
+    pusherService.genAuthString(socketId, channel)
