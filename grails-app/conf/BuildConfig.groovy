@@ -28,4 +28,11 @@ grails.project.dependency.resolution = {
 
         // runtime 'mysql:mysql-connector-java:5.1.13'
     }
+
+    plugins {
+        runtime ":hibernate:$grailsVersion"
+        runtime ":rest:0.7"
+
+        build   ":tomcat:$grailsVersion"
+    }
 }
