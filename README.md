@@ -1,6 +1,6 @@
 # Grails plugin for Pusher
 
-This plugin is a wrapper for the [Pusher](http://pusher.com/) REST API.
+This plugin is a wrapper for the [Pusher](http://pusher.com/) Publisher API.
 
 
 ### Installation
