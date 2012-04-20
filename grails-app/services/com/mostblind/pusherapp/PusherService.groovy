@@ -167,10 +167,14 @@ class PusherService {
    * Generate the authorization string required for private channels
    * @param socketId
    * @param channel
+   * @param channelData Optional stringified json when using presence channel
    * @return String signed code
    */
-  def genAuthString(String socketId, String channel) {
+  def genAuthString(String socketId, String channel, String channelData = null) {
     def authToken = socketId + ':' + channel
+    if (channelData) {
+      authToken += ":${channelData}"
+    }
     pusherApplicationKey + ':' + hmacsha256Representation(authToken)
   }
 
