@@ -33,6 +33,6 @@ The second "triggerPush" method provides an additional parameter for the socket_
 
     pusherService.triggerPush(channel, event, jsonData, socketId)
 
-Helper method for generating authorization string required for private channels:
+Helper method for generating authorization string required for private and presence channels:
 
-    pusherService.genAuthString(socketId, channel)
+    pusherService.genAuthString(socketId, channel, userData)
