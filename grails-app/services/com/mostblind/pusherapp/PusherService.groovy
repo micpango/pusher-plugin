@@ -4,7 +4,7 @@ import groovyx.net.http.RESTClient
 import java.security.InvalidKeyException
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
-import static groovyx.net.http.ContentType.URLENC
+import static groovyx.net.http.ContentType.JSON
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
 class PusherService {
@@ -154,7 +154,7 @@ class PusherService {
 
     try {
       def response = pusher.post(
-        requestContentType: URLENC,
+        requestContentType: JSON,
         body: jsonData)
       response.status
     } catch (Exception e) {
