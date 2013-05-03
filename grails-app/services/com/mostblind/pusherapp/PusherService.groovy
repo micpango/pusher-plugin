@@ -57,7 +57,7 @@ class PusherService {
     buffer.append("auth_key=")
     buffer.append(pusherApplicationKey)
     buffer.append("&auth_timestamp=")
-    buffer.append(System.currentTimeMillis() / 1000)
+    buffer.append((long)System.currentTimeMillis() / 1000L)
     buffer.append("&auth_version=1.0")
     buffer.append("&body_md5=")
     buffer.append(jsonData.encodeAsMD5())
